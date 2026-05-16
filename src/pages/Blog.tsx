@@ -7,11 +7,12 @@ export default function Blog() {
   const posts = [
     {
       id: 1,
-      title: "Why 'Colorblind' Parenting Doesn't Work",
-      excerpt: "Ignoring race doesn't protect children; it leaves them unequipped to understand their world. Here's how to have age-appropriate conversations about identity.",
-      category: "Parenting",
-      date: "October 12, 2023",
-      image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "Roots-Based Education & Global Education",
+      excerpt: "Insights on creating roots-based, glocal education systems that empower our communities.",
+      category: "Article",
+      date: "May 2026",
+      image: "/linkedin-cover.jfif",
+      externalLink: "https://www.linkedin.com/posts/dr-chizoba-imoka-ubochioma-49b67558_rootsbasededucation-glocaleducation-globaleducation-ugcPost-7457616055981748224-1Voc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF6hiWkBPVoJ8L2hlmvn6xMAl33XWsPl_aw"
     },
     {
       id: 2,
@@ -58,13 +59,13 @@ export default function Blog() {
   return (
     <div className="bg-[#FAFAF8] min-h-screen">
       <SEO 
-        title="Blog & Insights" 
-        description="Read the latest insights, articles, and resources on Afrocentric education, parenting, and cultural awareness from Dr. Chizoba Imoka."
+        title="Articles" 
+        description="Read the latest articles and resources on Afrocentric education, parenting, and cultural awareness from Dr. Chizoba Imoka."
       />
       {/* Hero */}
       <section className="py-20 bg-[#1A1A1A] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#D4AF37]">Insights & Articles</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#D4AF37]">Articles</h1>
           <p className="text-xl max-w-2xl mx-auto text-gray-300">
             Thoughts on Afrocentric education, identity development, and culturally responsive parenting.
           </p>
@@ -82,15 +83,20 @@ export default function Blog() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group bg-white rounded-sm overflow-hidden shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white rounded-sm overflow-hidden shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-lg transition-all duration-300"
               >
-                <div className="h-48 overflow-hidden">
+                <div className="h-48 overflow-hidden relative">
                   <img 
                     src={post.image} 
                     alt={post.title} 
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
+                  {post.externalLink && (
+                    <div className="absolute top-4 right-4 bg-[#0a66c2] text-white text-xs font-bold px-3 py-1 rounded-sm shadow-sm flex items-center">
+                      LinkedIn
+                    </div>
+                  )}
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex justify-between items-center mb-3 text-sm">
@@ -99,9 +105,21 @@ export default function Blog() {
                   </div>
                   <h2 className="text-xl font-bold text-[#1A1A1A] mb-3 line-clamp-2">{post.title}</h2>
                   <p className="text-gray-600 mb-6 line-clamp-3 flex-grow">{post.excerpt}</p>
-                  <Link to={`/blog/${post.id}`} className="text-[#5A3A22] font-semibold hover:text-[#D4AF37] flex items-center mt-auto">
-                    Read Article <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  
+                  {post.externalLink ? (
+                    <a 
+                      href={post.externalLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-[#5A3A22] font-semibold hover:text-[#D4AF37] flex items-center mt-auto"
+                    >
+                      View on LinkedIn <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  ) : (
+                    <Link to={`/blog/${post.id}`} className="text-[#5A3A22] font-semibold hover:text-[#D4AF37] flex items-center mt-auto">
+                      Read Article <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  )}
                 </div>
               </motion.article>
             ))}

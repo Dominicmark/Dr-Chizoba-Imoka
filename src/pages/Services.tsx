@@ -10,39 +10,42 @@ export default function Services() {
       id: "school-consulting",
       title: "School Consulting",
       icon: GraduationCap,
-      description: "Transform your institution's approach to history and culture. We work with administrators and teachers to integrate Afrocentric perspectives into existing curricula.",
+      description: "Help your school cultivate historically conscious, culturally grounded learning environments where students see themselves, their histories, and their potential reflected in what they learn.\n\nWe partner with school leaders and educators to reimagine curriculum, strengthen cultural relevance, and create learning experiences that prepare students to thrive confidently in a global world.",
       outcomes: [
-        "Comprehensive curriculum audit and redesign",
-        "Teacher training on culturally responsive pedagogy",
-        "Strategies for inclusive classroom environments"
+        "Curriculum review and culturally grounded redesign",
+        "Teacher training in identity-centered and culturally responsive pedagogy",
+        "Strategies for building inclusive, affirming classroom cultures",
+        "Tools for integrating history, identity, and belonging across learning experiences"
       ],
-      audience: "K-12 Schools, Educational Districts, Private Academies",
+      audience: "K–12 Schools, Educational Networks, Private Academies, and Community Learning Programs",
       image: "https://lh3.googleusercontent.com/pw/AP1GczN4XecXCKzQSO5VqoK6MF3otoFKyd97KI7eJPqKNY-u3xXEcUDA7bbLuhXv3MCT4zyS190Uo8dkneoAoTNAO_3ef7B-9y5PsX5byiT1CN99o9Kk1yhMGknpqWwaD0BcIf_hbL-IEDJYpzVnC90gsCHj7w=w1318-h879-s-no-gm?authuser=0"
     },
     {
       id: "parent-coaching",
       title: "Parent Coaching",
       icon: Users,
-      description: "Navigate the complexities of raising culturally confident children. Personalized guidance to help you foster identity, resilience, and pride at home.",
+      description: "Support for parents and caregivers seeking to raise children who are confident in who they are, connected to their heritage, and prepared to navigate the world with clarity and pride.\n\nThrough personalized guidance, practical tools, and meaningful conversations, we help families create home environments where identity, history, and belonging are nurtured intentionally.",
       outcomes: [
-        "Customized family cultural action plans",
-        "Scripts for difficult conversations about race and history",
-        "Curated resources for home libraries"
+        "Personalized family identity and cultural connection plans",
+        "Guidance for navigating conversations about race, history, and belonging",
+        "Curated books, resources, and storytelling tools for the home",
+        "Strategies for building confidence, rootedness, and resilience in children"
       ],
-      audience: "Parents, Guardians, Caregivers",
+      audience: "Parents, Guardians, Caregivers, and Families Raising Children Across Cultures",
       image: "https://lh3.googleusercontent.com/pw/AP1GczOCKFc1B5-wPd1a3I9y5pzgY_xcA9z33evhdM-_wxUQdij5q158feIjyE8c0DAmklWR7NDtI98i402oiUE9RC5gcdee8NRHWmWL8g3tWtbXPyJu4KOFvKgEPS8ZOeo5uFV5CiDrKnxY4OmwgO4NNRA8ew=w1319-h879-s-no-gm?authuser=0"
     },
     {
       id: "workshops",
       title: "Community Workshops",
       icon: BookOpen,
-      description: "Interactive, engaging sessions designed to educate and empower groups. Perfect for community centers, parent-teacher associations, and corporate diversity groups.",
+      description: "Interactive and thought-provoking workshops designed to help communities explore identity, history, belonging, and cultural confidence in meaningful and practical ways.\n\nThrough storytelling, dialogue, and reflective learning experiences, participants are invited to deepen their understanding of historical consciousness while building stronger, more connected communities.",
       outcomes: [
-        "Shared understanding of historical context",
-        "Actionable community-building strategies",
-        "Facilitated dialogue on identity and representation"
+        "Deeper understanding of identity, heritage, and historical context",
+        "Practical strategies for fostering belonging and cultural confidence",
+        "Facilitated conversations around history, representation, and community healing",
+        "Tools for building more inclusive and culturally affirming spaces"
       ],
-      audience: "Community Organizations, PTAs, Corporate ERGs",
+      audience: "Community Organizations, Schools, PTAs, Youth Programs, Cultural Institutions, and Workplace Communities",
       image: "https://lh3.googleusercontent.com/pw/AP1GczO0xF1RMrgCH6oGbnds-ehLoti0Q5dD77hZsqpAbeIE0XKM_TLrDZqScgvOvhrq3xkEDB_PM5fShjp1_Kp0e3alFsQIhu3d1Mt5jLIsQUYDKH6whPiJYAdedvvJXmSxppwdOiKVRc538Mnrh2VR5vERmg=w1319-h879-s-no-gm?authuser=0"
     }
   ];
@@ -80,7 +83,7 @@ export default function Services() {
                     <service.icon className="h-10 w-10 text-[#5A3A22]" />
                   </div>
                   <h2 className="text-3xl font-serif font-bold text-[#1A1A1A] mb-4">{service.title}</h2>
-                  <p className="text-lg text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-lg text-gray-600 mb-6 whitespace-pre-line">{service.description}</p>
                   
                   <div className="mb-6">
                     <h4 className="font-bold text-[#1A1A1A] mb-2">Key Outcomes:</h4>

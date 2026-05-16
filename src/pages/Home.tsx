@@ -9,8 +9,9 @@ import { useRef, useEffect } from 'react';
 // and update the `src` paths below to match your filenames (e.g., '/youtube.png').
 const brandImages = [
   { name: "Corona Schools' Trust Council", src: '/brands/cropped-Logo-white-background.png', className: 'h-24 w-auto object-contain max-w-[250px]', containerClass: 'min-w-[250px]' },
-  { name: 'Mastercard Foundation', src: '/brands/mastercard_foundation.png', className: 'h-20 w-auto object-contain max-w-[250px]', containerClass: 'min-w-[250px]' },
-  { name: 'University of Toronto', src: '/brands/University_of_Toronto-Logo.wine.png', className: 'h-24 w-auto object-contain max-w-[250px]', containerClass: 'min-w-[250px]' },
+  { name: 'Aga Khan Foundation', src: '/brands/aga-khan-foundation.png', className: 'h-40 w-auto object-contain max-w-[300px]', containerClass: 'min-w-[300px]' },
+  { name: 'Kigali Public Library', src: '/brands/kigali-public-library.jpg', className: 'h-32 w-auto object-contain max-w-[300px]', containerClass: 'min-w-[300px]' },
+  { name: 'University of Toronto', src: '/brands/University_of_Toronto-Logo.wine.png', className: 'h-32 w-auto object-contain max-w-[300px]', containerClass: 'min-w-[300px]' },
   { name: 'TEDx', src: '/brands/TEDx-Logo-768x432.png', className: 'h-12 w-auto object-contain max-w-[150px]', containerClass: 'min-w-[150px]' },
   { name: 'Teach For Nigeria', src: '/brands/TFN-Logo.png', className: 'h-12 w-auto object-contain max-w-[150px]', containerClass: 'min-w-[150px]' }
 ];
@@ -66,15 +67,18 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left"
             >
-              <span className="block text-[#D4AF37] font-bold tracking-widest uppercase text-xl md:text-2xl mb-4">
+              <span className="block text-[#D4AF37] font-bold tracking-widest uppercase text-xl md:text-2xl mb-2">
                 Dr. Chizoba Imoka-Ubochioma
               </span>
+              <span className="block text-gray-600 font-medium tracking-widest uppercase text-sm mb-4">
+                Educator and Author
+              </span>
               <h1 className="text-4xl tracking-tight font-serif font-bold text-[#1A1A1A] sm:text-5xl md:text-6xl leading-tight">
-                <span className="block xl:inline">Raising Confident Children Through</span>{' '}
-                <span className="block text-[#5A3A22]">Afrocentric Education</span>
+                <span className="block xl:inline">Raising Rooted, Confident Children</span>{' '}
+                <span className="block text-[#5A3A22]">for a Global World.</span>
               </h1>
               <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Helping families and schools reconnect children to their identity, heritage, and purpose.
+                Helping parents, educators, and communities nurture historically conscious, culturally grounded, and globally prepared children.
               </p>
               <div className="mt-8 sm:mt-12 sm:flex sm:justify-center lg:justify-start gap-4">
                 <Link to="/book">
@@ -98,15 +102,21 @@ export default function Home() {
         <div className="animate-marquee flex space-x-8 items-center min-w-max">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="flex space-x-8 items-center">
-              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Cultural Identity</span>
+              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Historical Consciousness</span>
               <span className="text-[#1A1A1A]">•</span>
-              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Afrocentric Curriculum</span>
+              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Rooted Global Education</span>
               <span className="text-[#1A1A1A]">•</span>
-              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Parent Coaching</span>
+              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Identity</span>
               <span className="text-[#1A1A1A]">•</span>
-              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Community Leadership</span>
+              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Belonging</span>
+              <span className="text-[#1A1A1A]">•</span>
+              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Cultural Confidence</span>
               <span className="text-[#1A1A1A]">•</span>
               <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Heritage</span>
+              <span className="text-[#1A1A1A]">•</span>
+              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Leadership</span>
+              <span className="text-[#1A1A1A]">•</span>
+              <span className="text-[#1A1A1A] font-bold uppercase tracking-widest text-sm">Education</span>
               <span className="text-[#1A1A1A]">•</span>
             </div>
           ))}

@@ -1,17 +1,20 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="col-span-1 md:col-span-1">
-            <Link to="/" className="text-2xl md:text-3xl font-sans text-white mb-6 flex items-center tracking-tight">
-              <span className="font-bold">Dr. Chizoba</span>
-              <span className="font-light ml-1.5 opacity-90">Imoka</span>
+          <div className="col-span-1 md:col-span-1 -mt-8 md:-mt-16">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/logo-white.png" 
+                alt="Dr. Chizoba Imoka - Education Catalyst" 
+                className="h-[220px] w-auto object-contain p-2" 
+              />
             </Link>
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-gray-400 text-sm mb-6 -mt-14 relative z-10">
               Raising confident children through Afrocentric education. Reconnecting families to their identity, heritage, and purpose.
             </p>
             <div className="flex space-x-4">
@@ -37,7 +40,7 @@ export default function Footer() {
               <li><Link to="/book" className="hover:text-white transition-colors">The Book</Link></li>
               <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
               <li><Link to="/speaking" className="hover:text-white transition-colors">Speaking</Link></li>
-              <li><Link to="/blog" className="hover:text-white transition-colors">Insights</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors">Articles</Link></li>
             </ul>
           </div>
 
@@ -54,10 +57,14 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-[#D4AF37]">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li className="flex items-center">
-                <Mail className="h-4 w-4 mr-2" />
-                hello@afrocentriced.com
+                <Mail className="h-4 w-4 mr-2 flex-shrink-0" />
+                <span>info@chizobaimoka.com</span>
               </li>
-              <li className="mt-4">
+              <li className="flex items-center mt-3">
+                <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
+                <span>+250 793 245 087</span>
+              </li>
+              <li className="mt-6">
                 <Link to="/contact" className="inline-block border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1A1A1A] px-4 py-2 rounded-sm transition-colors">
                   Book a Session
                 </Link>

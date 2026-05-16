@@ -79,7 +79,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#1A1A1A]">Email</h3>
-                    <p className="text-gray-600">hello@afrocentriced.com</p>
+                    <p className="text-gray-600">info@chizobaimoka.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -88,7 +88,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#1A1A1A]">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+250 793 245 087</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -146,7 +146,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-[#5A3A22]"
-                      placeholder="(555) 123-4567"
+                      placeholder="+250 793 245 087"
                     />
                   </div>
                   <div>

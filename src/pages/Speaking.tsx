@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { Mic, Calendar, Users, Globe, GraduationCap } from 'lucide-react';
+import { Mic, Calendar, Users, Globe, GraduationCap, Briefcase, Building, BookOpen } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
 
@@ -33,27 +33,31 @@ export default function Speaking() {
       {/* Topics */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 max-w-4xl mx-auto">
             <h2 className="text-3xl font-serif font-bold text-[#1A1A1A]">Signature Topics</h2>
-            <p className="mt-4 text-lg text-gray-600">Customized presentations for your specific audience.</p>
+            <p className="mt-4 text-lg text-gray-600">Thought-provoking talks designed to help audiences rethink education, identity, historical consciousness, and the role of culture in shaping confident, globally prepared learners.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "The Power of Representation in the Classroom",
-                desc: "An exploration of how seeing oneself in curriculum impacts academic performance and self-esteem. Actionable strategies for educators to diversify their teaching materials."
+                title: "The Power of Seeing Yourself in the Story",
+                desc: "Explore how representation in curriculum shapes identity, confidence, belonging, and academic engagement. This talk equips educators with practical strategies for creating learning environments where students feel seen, valued, and historically connected."
               },
               {
                 title: "Raising Confident Children in a Disconnected World",
-                desc: "A keynote designed for parents and caregivers on practical ways to instill cultural pride and resilience at home, countering negative societal narratives."
+                desc: "A practical and deeply reflective keynote for parents and caregivers exploring how to nurture cultural confidence, resilience, and belonging in children navigating an increasingly disconnected world."
               },
               {
                 title: "Beyond Black History Month",
-                desc: "How institutions can move from performative, once-a-year celebrations to deep, integrated, year-round Afrocentric education."
+                desc: "How schools and institutions can move beyond symbolic celebrations toward historically conscious, culturally grounded learning woven meaningfully throughout the year."
               },
               {
                 title: "Knowing Your Roots: The Foundation of Leadership",
-                desc: "For corporate and student leaders: understanding how cultural grounding and historical awareness create more empathetic, effective, and visionary leaders."
+                desc: "An exploration of how historical awareness, cultural grounding, and identity shape empathetic, courageous, and visionary leadership across schools, organizations, and communities."
+              },
+              {
+                title: "Historical Consciousness: Why Identity Matters in Education",
+                desc: "How understanding history shapes confidence, belonging, leadership, and the way children imagine their place in the world."
               }
             ].map((topic, index) => (
               <motion.div 
@@ -62,7 +66,7 @@ export default function Speaking() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-sm shadow-sm border border-gray-100 border-l-4 border-l-[#5A3A22]"
+                className={`bg-white p-8 rounded-sm shadow-sm border border-gray-100 border-l-4 border-l-[#5A3A22] ${index === 4 ? 'md:col-span-2 md:max-w-xl md:mx-auto' : ''}`}
               >
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">{topic.title}</h3>
                 <p className="text-gray-600">{topic.desc}</p>
@@ -80,28 +84,34 @@ export default function Speaking() {
               <h2 className="text-3xl font-serif font-bold text-[#D4AF37] mb-8">Who I Speak To</h2>
               <ul className="space-y-6">
                 <li className="flex items-center">
-                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4">
-                    <GraduationCap className="h-6 w-6 text-[#D4AF37]" />
+                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4 shrink-0">
+                    <Mic className="h-6 w-6 text-[#D4AF37]" />
                   </div>
-                  <span className="text-lg">Educational Conferences & Summits</span>
+                  <span className="text-lg">Educational Conferences, Leadership Summits & Teacher Development Events</span>
                 </li>
                 <li className="flex items-center">
-                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4">
+                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4 shrink-0">
                     <Users className="h-6 w-6 text-[#D4AF37]" />
                   </div>
-                  <span className="text-lg">Parent-Teacher Associations (PTAs)</span>
+                  <span className="text-lg">Parent Communities, PTAs & Family Engagement Programs</span>
                 </li>
                 <li className="flex items-center">
-                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4">
-                    <Globe className="h-6 w-6 text-[#D4AF37]" />
+                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4 shrink-0">
+                    <GraduationCap className="h-6 w-6 text-[#D4AF37]" />
                   </div>
-                  <span className="text-lg">Corporate Diversity & Inclusion Events</span>
+                  <span className="text-lg">Universities, Student Organizations & Academic Forums</span>
                 </li>
                 <li className="flex items-center">
-                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4">
-                    <Calendar className="h-6 w-6 text-[#D4AF37]" />
+                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4 shrink-0">
+                    <Building className="h-6 w-6 text-[#D4AF37]" />
                   </div>
-                  <span className="text-lg">University Symposia & Student Groups</span>
+                  <span className="text-lg">Schools, Cultural Institutions & Community Organizations</span>
+                </li>
+                <li className="flex items-center">
+                  <div className="bg-[#4A2A12] p-3 rounded-full mr-4 shrink-0">
+                    <Briefcase className="h-6 w-6 text-[#D4AF37]" />
+                  </div>
+                  <span className="text-lg">Workplace Communities & Leadership Teams Exploring Identity, Belonging, and Inclusion</span>
                 </li>
               </ul>
             </div>

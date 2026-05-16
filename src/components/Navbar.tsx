@@ -8,7 +8,7 @@ const navLinks = [
   { name: 'Book', path: '/book' },
   { name: 'Services', path: '/services' },
   { name: 'Speaking', path: '/speaking' },
-  { name: 'Insights', path: '/blog' },
+  { name: 'Articles', path: '/blog' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -19,15 +19,18 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-[#FAFAF8]/90 backdrop-blur-md border-b border-[#5A3A22]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex items-center">
-            <Link to="/" className="text-2xl md:text-3xl font-sans text-[#4A3B32] flex items-center tracking-tight">
-              <span className="font-bold">Dr. Chizoba</span>
-              <span className="font-light ml-1.5">Imoka</span>
+        <div className="flex justify-end md:justify-between items-center h-24 relative">
+          <div className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center w-[230px] md:w-[320px]">
+            <Link to="/" className="relative flex items-center w-full">
+              <img 
+                src="/logo.png" 
+                alt="Dr. Chizoba Imoka - Education Catalyst" 
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 -translate-y-1/2 h-[150px] md:h-[210px] w-auto max-w-none object-contain hover:opacity-90 transition-opacity" 
+              />
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 z-10 relative">
             {navLinks.map((link) => (
               <Link
                 key={link.name}

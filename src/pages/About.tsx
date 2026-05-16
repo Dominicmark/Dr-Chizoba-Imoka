@@ -105,15 +105,15 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-[#4A2A12] p-10 rounded-sm">
-              <h3 className="text-2xl font-serif font-bold mb-4 text-[#D4AF37]">Our Mission</h3>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-[#D4AF37]">My Mission</h3>
               <p className="text-gray-200 text-lg">
-                To equip parents, educators, and communities with the knowledge, frameworks, and confidence to teach Afrocentric history and foster unshakeable cultural pride in children.
+                To equip parents, educators, and communities with the knowledge, frameworks, and confidence to raise historically conscious, culturally grounded, and globally prepared children.
               </p>
             </div>
             <div className="bg-[#4A2A12] p-10 rounded-sm">
-              <h3 className="text-2xl font-serif font-bold mb-4 text-[#D4AF37]">Our Vision</h3>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-[#D4AF37]">My Vision</h3>
               <p className="text-gray-200 text-lg">
-                A world where every child of African descent understands their heritage, knows their worth, and steps into their future with absolute clarity and purpose.
+                A world where every child of African descent understands their heritage, knows their worth, and steps into the future with confidence, clarity, and purpose.
               </p>
             </div>
           </div>
@@ -153,15 +153,15 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6">
               <h3 className="text-xl font-bold text-[#5A3A22] mb-3">As an Author</h3>
-              <p className="text-gray-600">Translating complex historical and pedagogical concepts into accessible, transformative literature for everyday use.</p>
+              <p className="text-gray-600">Transforming complex ideas about history, identity, and belonging into accessible tools that help children and families reconnect with their roots.</p>
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-[#5A3A22] mb-3">As an Educator</h3>
-              <p className="text-gray-600">Developing curriculum that meets academic standards while centering marginalized voices and histories.</p>
+              <p className="text-gray-600">Designing culturally grounded learning experiences that affirm identity, broaden historical understanding, and prepare children for a global future.</p>
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-[#5A3A22] mb-3">As a Speaker</h3>
-              <p className="text-gray-600">Igniting conversations that challenge the status quo and inspire institutional change across the country.</p>
+              <p className="text-gray-600">Leading courageous conversations that challenge educational norms and inspire schools, educators, and communities to rethink how children are taught to see themselves and the world.</p>
             </div>
           </div>
           
