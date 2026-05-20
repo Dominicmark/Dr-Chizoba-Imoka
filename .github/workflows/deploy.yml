@@ -32,4 +32,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/      # The folder where the built Vite app lives
-        server-dir: /public_html/ # Change this if your Bluehost directory is different
+        server-dir: /public_html/chizobaimoka/ # Maps to Document Root for chizobaimoka.com
