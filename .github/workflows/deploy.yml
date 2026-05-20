@@ -1,0 +1,35 @@
+name: Deploy to Bluehost
+
+on:
+  push:
+    branches:
+      - main # Triggers the automation whenever you update the main branch
+
+jobs:
+  web-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the app
+      run: npm run build
+
+    - name: Sync files via FTP to Bluehost
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/      # The folder where the built Vite app lives
+        server-dir: /public_html/ # Change this if your Bluehost directory is different

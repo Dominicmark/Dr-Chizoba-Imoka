@@ -16,43 +16,48 @@ export default function Blog() {
     },
     {
       id: 2,
-      title: "Auditing Your Classroom Library",
-      excerpt: "A step-by-step guide for educators to ensure their reading materials reflect diverse histories and empower all students.",
-      category: "Education",
-      date: "September 28, 2023",
-      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "Nigeria's New Curriculum: A Step Forward in Transformation",
+      excerpt: "An analysis of Nigeria's new educational curriculum and its potential to drive meaningful transformation in the education sector.",
+      category: "Article",
+      date: "Recent",
+      image: "https://media.licdn.com/dms/image/v2/D4E12AQE3AVbwLAKUBw/article-cover_image-shrink_720_1280/B4EZkvcKq.HoAI-/0/1757437545236?e=2147483647&v=beta&t=dTMcBJq0suGGkZObmopIFZETL_14PNfPW_YI6E66g7c",
+      externalLink: "https://www.linkedin.com/pulse/nigerias-new-curriculum-step-forward-transformation-imoka-ubochioma-vvsme"
     },
     {
       id: 3,
-      title: "The History They Didn't Teach Us",
-      excerpt: "Five pre-colonial African civilizations that should be standard in every world history curriculum.",
-      category: "Cultural Awareness",
-      date: "September 10, 2023",
-      image: "https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "EDUCATING TO TRANSFORM",
+      excerpt: "When it comes to education reform in Africa, there is somewhat of a consensus amongst students, activists, critical education scholars, and practitioners that a complete system overhaul is required...",
+      category: "Article",
+      date: "Recent",
+      image: "https://media.licdn.com/dms/image/v2/D4D12AQEBAT_ND5Ptlw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1668161521539?e=2147483647&v=beta&t=xPPVBJUthnNylPuZGS4H2JG3VaO3jYjM3HsXqrJ7FmM",
+      externalLink: "https://www.linkedin.com/pulse/educating-transform-dr-chizoba-imoka-ubochioma"
     },
     {
       id: 4,
-      title: "Building Resilience Through Ancestral Stories",
-      excerpt: "How knowing the triumphs of their ancestors helps children navigate modern systemic challenges with greater confidence.",
-      category: "Identity Development",
-      date: "August 22, 2023",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "Re-Imagining Early Childhood Education in Nigeria.",
+      excerpt: "A few months ago, my 2.5 years old son began school.",
+      category: "Article",
+      date: "Recent",
+      image: "https://media.licdn.com/dms/image/v2/D4D12AQHT1dRcL3Ez5w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1669130192673?e=2147483647&v=beta&t=mHMFldsO0mxPwNhER4TbEx7MTEj2nfA9QgMEbmR-SzA",
+      externalLink: "https://www.linkedin.com/pulse/re-imagining-early-childhood-education-nigeria-imoka-ubochioma"
     },
     {
       id: 5,
-      title: "Navigating Pushback: A Guide for Teachers",
-      excerpt: "Strategies for educators facing resistance when trying to implement more inclusive, Afrocentric lesson plans.",
-      category: "Education",
-      date: "August 5, 2023",
-      image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "THE ABA WOMEN RIOT OF 1929",
+      excerpt: "On January 1, 1914, Lord Lugard signed documents Amalgamating the Northern Protectorate and the southern Protectorate giving birth to today’s Nigeria. He also introduced the indirect rule system under which the British would rule locally through indigenes of the community called “warrant chiefs”.",
+      category: "Article",
+      date: "Recent",
+      image: "https://media.licdn.com/dms/image/v2/C4D12AQEMD3NwoACJpg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1644504660223?e=2147483647&v=beta&t=ePouSNPrLy1Ik_ovHvMslLrJu3TBrcg2r94wyZR0arM",
+      externalLink: "https://www.linkedin.com/pulse/aba-women-riot-1929-dr-chizoba-imoka-ubochioma"
     },
     {
       id: 6,
-      title: "Celebrating Heritage Beyond February",
-      excerpt: "Practical ways families can integrate cultural celebration into their daily lives, not just during Black History Month.",
-      category: "Parenting",
-      date: "July 18, 2023",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      title: "The Yoruba story of creation.",
+      excerpt: "Months had passed, Obatala was proud of all he had achieved but, he began to feel lonely and bored. He decided to make beings like himself to keep him company.",
+      category: "Article",
+      date: "Recent",
+      image: "https://media.licdn.com/dms/image/v2/C5612AQFkBOdQCRJRKA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1638953527770?e=2147483647&v=beta&t=MYzlYMGlgr2oGomfubTV8j8l28lXv0iqOu27IqHZCQA",
+      externalLink: "https://www.linkedin.com/pulse/yoruba-story-creation-dr-chizoba-imoka-ubochioma"
     }
   ];
 

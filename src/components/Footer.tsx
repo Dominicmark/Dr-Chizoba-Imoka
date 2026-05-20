@@ -15,7 +15,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-400 text-sm mb-6 -mt-14 relative z-10">
-              Raising confident children through Afrocentric education. Reconnecting families to their identity, heritage, and purpose.
+              Helping parents, educators, and communities nurture historically conscious, culturally grounded, and globally prepared children.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/chichiofafrica/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D4AF37] transition-colors">

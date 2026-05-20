@@ -9,8 +9,7 @@ import { useRef, useEffect } from 'react';
 // and update the `src` paths below to match your filenames (e.g., '/youtube.png').
 const brandImages = [
   { name: "Corona Schools' Trust Council", src: '/brands/cropped-Logo-white-background.png', className: 'h-24 w-auto object-contain max-w-[250px]', containerClass: 'min-w-[250px]' },
-  { name: 'Aga Khan Foundation', src: '/brands/aga-khan-foundation.png', className: 'h-40 w-auto object-contain max-w-[300px]', containerClass: 'min-w-[300px]' },
-  { name: 'Kigali Public Library', src: '/brands/kigali-public-library.jpg', className: 'h-32 w-auto object-contain max-w-[300px]', containerClass: 'min-w-[300px]' },
+  { name: 'Aga Khan Foundation', src: '/brands/aga-khan-foundation.png.png', className: 'h-40 w-auto object-contain max-w-[300px]', containerClass: 'min-w-[300px]' },
   { name: 'University of Toronto', src: '/brands/University_of_Toronto-Logo.wine.png', className: 'h-32 w-auto object-contain max-w-[300px]', containerClass: 'min-w-[300px]' },
   { name: 'TEDx', src: '/brands/TEDx-Logo-768x432.png', className: 'h-12 w-auto object-contain max-w-[150px]', containerClass: 'min-w-[150px]' },
   { name: 'Teach For Nigeria', src: '/brands/TFN-Logo.png', className: 'h-12 w-auto object-contain max-w-[150px]', containerClass: 'min-w-[150px]' }
@@ -81,14 +80,14 @@ export default function Home() {
                 Helping parents, educators, and communities nurture historically conscious, culturally grounded, and globally prepared children.
               </p>
               <div className="mt-8 sm:mt-12 sm:flex sm:justify-center lg:justify-start gap-4">
-                <Link to="/book">
+                <Link to="/services">
                   <Button variant="primary" className="w-full sm:w-auto">
-                    Get my Book
+                    Explore the Movement
                   </Button>
                 </Link>
-                <Link to="/services">
+                <Link to="/speaking">
                   <Button variant="outline" className="w-full sm:w-auto mt-3 sm:mt-0">
-                    Work With Me
+                    Invite Dr Chizoba to your school..
                   </Button>
                 </Link>
               </div>
