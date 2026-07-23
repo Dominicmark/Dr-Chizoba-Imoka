@@ -14,7 +14,9 @@ import Book from './pages/Book';
 import Services from './pages/Services';
 import Speaking from './pages/Speaking';
 import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 function ScrollProgress() {
   const { scrollYProgress } = useScroll();
@@ -41,7 +43,9 @@ export default function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/speaking" element={<Speaking />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/admin" element={<AdminDashboard />} />
           </Routes>
         </main>
         <Footer />

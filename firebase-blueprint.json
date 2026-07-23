@@ -1,0 +1,36 @@
+{
+  "entities": {
+    "Post": {
+      "title": "Blog Post",
+      "description": "A blog post or article",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "maxLength": 200 },
+        "excerpt": { "type": "string", "maxLength": 500 },
+        "category": { "type": "string", "maxLength": 100 },
+        "date": { "type": "string", "maxLength": 100 },
+        "image": { "type": "string", "maxLength": 500 },
+        "content": { "type": "string", "maxLength": 50000 },
+        "externalLink": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["title", "excerpt", "category", "date", "image", "content"]
+    }
+  },
+  "firestore": {
+    "posts/{postId}": {
+      "schema": "#/entities/Post",
+      "description": "The collection of blog posts"
+    },
+    "admins/{userId}": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "email": { "type": "string" }
+        }
+      },
+      "description": "Authorized administrators"
+    }
+  }
+}
