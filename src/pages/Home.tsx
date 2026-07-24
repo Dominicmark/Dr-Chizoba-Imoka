@@ -3,7 +3,9 @@ import { motion, useScroll, useTransform, useInView } from 'motion/react';
 import { ArrowRight, BookOpen, Users, GraduationCap, Mic } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { db } from '../lib/firebase';
+import { collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
 
 // To use your own PNG logos, upload them to the `public` folder in your project
 // and update the `src` paths below to match your filenames (e.g., '/youtube.png').
@@ -25,6 +27,21 @@ export default function Home() {
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const isVideoInView = useInView(videoRef, { margin: "-100px" });
+
+  const [latestPosts, setLatestPosts] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function fetchLatestPosts() {
+      try {
+        const q = query(collection(db, 'posts'), orderBy('createdAt', 'desc'), limit(3));
+        const snapshot = await getDocs(q);
+        setLatestPosts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      } catch (error) {
+        console.error("Error fetching latest posts:", error);
+      }
+    }
+    fetchLatestPosts();
+  }, []);
 
   useEffect(() => {
     if (isVideoInView && videoRef.current) {
@@ -352,6 +369,75 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+            {/* LATEST INSIGHTS (BLOG) */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-3xl font-serif font-bold text-[#1A1A1A]">Latest Insights</h2>
+              <p className="mt-4 text-lg text-gray-600">Thoughts, research, and reflections on education.</p>
+            </div>
+            <Link to="/blog" className="hidden sm:inline-flex items-center text-[#5A3A22] font-semibold hover:text-[#D4AF37] transition-colors">
+              View All Articles <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {latestPosts.map((post) => (
+              <Link key={post.id} to={`/blog/${post.id}`} className="group flex flex-col h-full bg-[#FAFAF8] rounded-sm overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="h-48 overflow-hidden relative">
+                  {post.image ? (
+                    <img 
+                      src={post.image} 
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                      <BookOpen className="h-12 w-12 text-gray-400" />
+                    </div>
+                  )}
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#5A3A22] rounded-sm">
+                      {post.category || 'Article'}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center text-xs text-gray-500 mb-3">
+                    <span>{post.date}</span>
+                    {post.views !== undefined && (
+                      <>
+                        <span className="mx-2">•</span>
+                        <span>{post.views.toLocaleString()} views</span>
+                      </>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold font-sans text-[#1A1A1A] mb-3 group-hover:text-[#5A3A22] transition-colors line-clamp-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 line-clamp-3 flex-grow">
+                    {post.excerpt}
+                  </p>
+                  <div className="text-[#5A3A22] font-semibold text-sm inline-flex items-center mt-auto">
+                    Read Article <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="mt-10 sm:hidden">
+            <Link to="/blog">
+              <Button variant="outline" className="w-full justify-center">
+                View All Articles
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

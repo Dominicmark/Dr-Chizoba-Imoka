@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Twitter, Linkedin, Link as LinkIcon, Check } from 'lucide-react';
 import SEO from '../components/SEO';
 import { db } from '../lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, updateDoc, increment } from 'firebase/firestore';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -21,8 +21,14 @@ export default function BlogPost() {
       try {
         const docRef = doc(db, 'posts', id);
         const docSnap = await getDoc(docRef);
+        
         if (docSnap.exists()) {
           setPost({ id: docSnap.id, ...docSnap.data() });
+          
+          // Increment views asynchronously
+          updateDoc(docRef, {
+            views: increment(1)
+          }).catch(err => console.error("Error updating views:", err));
         }
       } catch (error) {
         console.error("Error fetching post:", error);
